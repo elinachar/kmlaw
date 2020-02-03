@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
     <!-- Google Fonts API -->
-    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300|Didact+Gothic|Open+Sans:300|Roboto:300|Tinos&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,700|Didact+Gothic|Open+Sans:300|Roboto:300|Tinos&display=swap" rel="stylesheet">
 
     <!-- Custom styles for this template go here -->
     <link rel="stylesheet" href="css/styles.css">
@@ -133,13 +133,13 @@
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">Αρχική</a>
+            <a class="nav-link" href="#index" data-toggle="collapse" data-target=".navbar-collapse.show">Αρχική</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Το γραφείο μας</a>
+            <a class="nav-link" href="#" data-toggle="collapse" data-target=".navbar-collapse.show">Το γραφείο μας</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Η ομάδα μας</a>
+            <a class="nav-link" href="#" data-toggle="collapse" data-target=".navbar-collapse.show">Η ομάδα μας</a>
           </li>
           <li class="nav-item dropdown">
              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -147,71 +147,83 @@
                <!-- <i class='fas fa-angle-down fa-lg'></i> -->
              </a>
              <div class="dropdown-menu">
-               <a class="dropdown-item" href="#">Εργατικό Δίκαιο</a>
-               <a class="dropdown-item" href="#">Ποινικό Δίκαιο</a>
-               <a class="dropdown-item" href="#">Οικογενειακό Δίκαιο</a>
+               <a class="dropdown-item d-block d-md-none" href="#" data-toggle="collapse" data-target=".navbar-collapse.show">Όλοι οι Τομείς Δραστηριότητας</a>
+               <a class="dropdown-item" href="#" data-toggle="collapse" data-target=".navbar-collapse.show">Εργατικό Δίκαιο</a>
+               <a class="dropdown-item" href="#" data-toggle="collapse" data-target=".navbar-collapse.show">Ποινικό Δίκαιο</a>
+               <a class="dropdown-item" href="#" data-toggle="collapse" data-target=".navbar-collapse.show">Οικογενειακό Δίκαιο</a>
              </div>
          </li>
          <li class="nav-item">
-           <a class="nav-link" href="#">Επικοινωνία</a>
+           <a class="nav-link" href="#contact" data-toggle="collapse" data-target=".navbar-collapse.show">Επικοινωνία</a>
          </li>
         </ul>
       </div>
     </nav>
 
-
-
-    <!-- Contact starts here -->
-    <div class="container section" id="contact">
+    <div class="container" id="contact"> <!-- Contact starts here -->
+      <h2>Επικοινωνία</h2>
       <div class="row">
-        <div class="col-xs-12">
-          <h1>Επικοινωνία</h1>
-          <p>Για οποιαδήποτε πληροφορία επικοινωνήστε μαζί μας. </p><br>
+        <div class="col-12 col-md-4">
+            <address>
+              <span class="brandname">ΚΑΛΟΓΕΡΟΠΟΥΛΟΣ - ΜΑΚΑΤΟΥΝΑΚΗ & ΣΥΝΕΡΓΑΤΕΣ</span></br>
+              Μεραμβέλλου 25, 71202 Ηράκλειο<br>
+              <span class="description">T: </span><a href="tel:+302810286952">+30 2810 286952</a>, <a href="tel:+302810289575">+30 2810 289575</a><br>
+              <span class="description">F: </span> +30 2810 342843<br>
+              <span class="description">E: </span><a href="mailto:ik.kmlaw@gmail.com">ik.kmlaw@gmail.com</a>
+            </address>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <address>
-            PILATESstudio Άσκηση<br>
-            Pilates instructor: <i>Τόνια Μανωλακάκη</i><br>
-            Manager: <i>Κάλλια Καλλιγιαννάκη</i><br>
-            <span class="glyphicon glyphicon-map-marker"></span>Λεωφ. Ανδρέα Παπανδρέου 148, 71305 Ηράκλειο<br>
-          </address>
-          <p><a href="tel:+302813008177"><span class="glyphicon glyphicon-phone-alt" ></span>+30 2813 008177</a></p>
-          <p><a href="tel:+30697798897"><span class="glyphicon glyphicon-phone"></span> +30 6977 98897</a></p>
 
+        <div class="col-12 col-md-8 contact-form">
+          <div class="missing-on-submit hidden-before-submit">
+            <p>Το μήνυμά σας δεν στάλθηκε. Παρακαλώ συμπληρώστε τα ακόλουθα πεδία για να στείλετε το μήνυμα:</p>
+            <ul>
+              <li class="missing-name hidden-before-submit">Το όνομά σας</li>
+              <li class="missing-email hidden-before-submit">Το e-mail σας</li>
+              <li class="missing-message hidden-before-submit">Το μήνυμά σας</li>
+            </ul>
+          </div> <!-- end missing-on-submit -->
+          <div class="hidden-after-submit">
+            <p class="contact-form-title">Φόρμα Επικοινωνίας</p>
+            <form action="#" method="POST">
+              <div class="form-group">
+                <label for="form-name" title="This field is required" id="form-name-label" class="sr-only">Your Name *</label>
+                <input type="text" placeholder="Το ονομά σας *" id="form-name" class="form-control" name="name" required="required" oninvalid="this.setCustomValidity('Παρακαλώ εισάγετε το ονομά σας.')"
+      oninput="this.setCustomValidity('')" >
+              </div> <!-- end form-group -->
+
+              <div class="form-group">
+                <label for="form-phone" class="sr-only">Phone Number </label>
+                <input type="tel" pattern="^[0-9\-\+\s\(\)]*$" title="Only numbers [0-9] and the following symbols are allowed: - + &blank; ( )." placeholder="Το τηλέφωνό σας" id="form-phone" class="form-control" name="phone">
+              </div> <!-- end form-group -->
+
+              <div class="form-group">
+                <label for="form-email" title="This field is required" id="form-email-label" class="sr-only">E-mail *</label>
+                <input type="email"  placeholder="Το e-mail σας *" id="form-email" class="form-control" name="form-email" required="required" oninvalid="this.setCustomValidity('Παρακαλώ εισάγετε το e-mail σας.')"
+      oninput="this.setCustomValidity('')" >
+              </div> <!-- end form-group -->
+
+              <div class="form-group">
+                <label class="sr-only" for="form-message" title="This field is required" id="message-box-label">Your message to me *<span id="message-box-error-label" style="align:left"><span></label>
+                <textarea class="message-box form-control" placeholder="Το μήνυμά σας *" style="resize:none" cols="40" rows="5" id="form-message" name="message" required="required" oninvalid="this.setCustomValidity('Παρακαλώ αφήστε ένα μήνυμα.')"
+      oninput="this.setCustomValidity('')" ></textarea>
+                </div> <!-- end form-group -->
+
+              <div class="form-group">
+                <label for="form-submit-button" class="sr-only">Submit Button</label>
+                <button type="submit" class="btn btn-default" id="form-submit-button">Αποστολή</button>
+              </div> <!-- end form-group -->
+            </form>
+          </div>
+          <div id="visible-comment">
+            <p>Ευχαριστούμε που επικοινωνήσατε μαζί μας.</p>
+            <p>Έχουμε λάβει το μήνυμά σας και Θα σας απαντήσουμε το συντομότερον δυνατόν.<br>Για επείγοντα περιστατικά παρακαλώ επικοινωνήστε μαζί μας τηλεφωνικώς.</p>
+          </div>
         </div>
-        <div id="map" class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-1"></div>
       </div> <!-- end row -->
-    </div> <!-- end contact-section -->
-    <!-- Contact ends here -->
-
-    <div class="container" id="contanct"> <!-- Contact starts here -->
-      <div style="text-align:center">
-        <h2>Επικοινωνία</h2>
-        <p>Swing by for a cup of coffee, or leave us a message:</p>
-      </div>
       <div class="row">
-        <div class="column">
-          <img src="/w3images/map.jpg" style="width:100%">
-        </div>
-        <div class="column">
-          <form action="/action_page.php">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name..">
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-            <label for="country">Country</label>
-            <select id="country" name="country">
-              <option value="australia">Australia</option>
-              <option value="canada">Canada</option>
-              <option value="usa">USA</option>
-            </select>
-            <label for="subject">Subject</label>
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-            <input type="submit" value="Submit">
-          </form>
-        </div>
-        <div id="map" class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-1"></div>
-      </div>
+        <div id="map" class="col-12 col-md-10 offset-md-1"></div>
+      </div> <!-- end row -->
+
     </div> <!-- Contact ends here -->
 
     <!-- Footer starts here -->
@@ -245,7 +257,7 @@
     <script src="js/scripts.js"></script>
     <!-- Google Maps API key -->
     <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRE7BaZiOFWO13RZIn-FnTMCFf23YevQQ&callback=initMap">
     </script>
 
   </body>

@@ -19,6 +19,15 @@
   text-align: center;
 }
 
+/* no border is shown when focus or active */
+.btn:focus,
+.btn:focus:active,
+.btn:active {
+  outline: 0!important;
+  border: none!important;
+}
+
+
 /* LOGO */
 .logo {
   width: 200px;
@@ -200,8 +209,69 @@ button.navbar-toggler {
 
 
 /* CONTACT */
-#contact {
-  margin-top: 170px;
+address span,
+.contact-form-title {
+  font-weight: 700;
+}
+
+address .brandname {
+  font-size: 20px;
+}
+
+address .description {
+  color: var(--blue);
+}
+
+.contact-form {
+  border-left: solid 1px var(--blue-gray-trans);
+}
+
+.missing-on-submit {
+  border: solid 2px #b20000;
+  padding: 10px;
+  padding-bottom: 0;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.hidden-before-submit {
+  display: none;
+}
+
+.missing-on-submit li {
+  padding-bottom: 5px;
+}
+
+#contact button {
+  border-bottom: double;
+  border-top: double;
+  border-right: none;
+  border-left: none;
+  border-radius: 0;
+  padding: 10px 12px;
+}
+
+#contact .btn:hover {
+  background-color: var(--blue-gray-bg);
+}
+
+form .form-group:last-of-type {
+  margin-bottom: 5px;
+}
+
+#visible-comment {
+  display: none;
+  font-size: 18px;
+}
+
+#visible-comment p:first-of-type {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+#map {
+  margin: 20px auto;
+  height: 200px;
 }
 
 /* FOOTER */
@@ -293,6 +363,17 @@ footer p {
   .navbar-nav .dropdown-menu a:hover {
     background-color: var(--blue-gray-bkg);
   }
+
+  #contact {
+    margin-top: 150px;
+  }
+
+  .contact-form {
+    border-left: none;
+    border-top: solid 1px var(--blue-gray-trans);
+    padding-top: 20px;
+  }
+
 }
 
 /* XSmall devices */
