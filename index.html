@@ -161,14 +161,6 @@
 
 
 
-<div class="container">
-  <h3>Collapsible Navbar</h3>
-  <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).</p>
-  <p>Only when the button is clicked, the navigation bar will be displayed.</p>
-  <p>Tip: You can also remove the .navbar-expand-md class to ALWAYS hide navbar links and display the toggler button.</p>
-</div>
-
-
     <!-- Contact starts here -->
     <div class="container section" id="contact">
       <div class="row">
@@ -192,19 +184,35 @@
     </div> <!-- end contact-section -->
     <!-- Contact ends here -->
 
-    <div class="container">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nunc, rhoncus id consectetur ac, tincidunt eget ex. Nullam porttitor mauris nec tellus ultrices pulvinar. Etiam laoreet malesuada arcu eget efficitur. Curabitur in risus ut augue pharetra viverra id id orci. Vestibulum egestas sagittis velit vitae mattis. Nullam fringilla vehicula blandit. Aliquam varius bibendum semper. Suspendisse elementum nunc mi, sit amet pellentesque dui mattis quis. Praesent gravida commodo venenatis. Mauris at ipsum vitae eros scelerisque convallis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-
-Suspendisse mattis eget massa at sollicitudin. Donec sem libero, fringilla vel lorem et, sodales pulvinar leo. Donec in urna eu lorem bibendum consequat at id orci. Vestibulum auctor eget leo id rhoncus. Integer euismod rhoncus lacus, ac interdum risus aliquet ullamcorper. Phasellus eu lectus fermentum, pulvinar dui sed, facilisis nisi. Nunc pulvinar posuere arcu id rutrum. Nunc tempus, risus ut semper hendrerit, quam enim luctus ipsum, vitae pellentesque magna nisi et nisl. Etiam ut mauris vitae odio maximus condimentum. Aliquam nunc velit, pellentesque eget ex nec, pulvinar sollicitudin lorem. Fusce non molestie lacus. Duis sed tincidunt leo, nec lacinia sapien. Nunc ultrices volutpat nisl, sed fermentum nisi ultricies ut. Phasellus vel condimentum ante.
-
-Fusce vitae vehicula nunc. Vestibulum a fringilla nibh. Donec ullamcorper vehicula purus accumsan dapibus. Nam ornare tempor enim. Vivamus nibh metus, mollis at quam non, convallis molestie risus. Nullam dapibus feugiat faucibus. Mauris vel ex id sapien elementum finibus vitae vel turpis. Cras vehicula eleifend enim, vel sollicitudin sapien molestie in. Donec nec aliquam magna, eget volutpat felis. Donec quis imperdiet dui. Ut velit sem, laoreet et ipsum a, consectetur iaculis urna.
-
-Proin ut pulvinar nulla. Curabitur et porttitor est. In a sem massa. Donec libero velit, pellentesque nec ullamcorper eu, vehicula suscipit felis. Fusce vel faucibus justo. Donec et auctor sem. Fusce quis dictum diam, vel ultricies elit. Fusce diam est, finibus ullamcorper viverra ut, ornare nec felis. Nulla tempus eget purus ac sollicitudin.
-
-Nullam condimentum et libero sit amet vestibulum. Etiam vestibulum turpis sit amet nisi facilisis tempus. Curabitur at velit vitae felis tristique condimentum scelerisque nec sem. Integer porta diam eleifend arcu ornare, in lacinia eros maximus. Cras non vestibulum lacus, nec tempor odio. Aenean est nibh, sollicitudin ut arcu a, consectetur fringilla nisi. Nunc bibendum convallis nisl commodo molestie. In condimentum mauris a turpis posuere finibus. Nulla fermentum tortor sagittis ex gravida, non bibendum neque fringilla. Donec porttitor, metus ullamcorper consequat convallis, lorem ligula mollis sapien, ac fermentum est magna non nulla. Maecenas venenatis venenatis enim vel congue. Sed laoreet diam eget arcu convallis feugiat. Suspendisse vestibulum fermentum justo in lobortis. Nunc quam nunc, volutpat a eleifend ac, gravida sit amet elit.
-      </p>
-    </div>
+    <div class="container" id="contanct"> <!-- Contact starts here -->
+      <div style="text-align:center">
+        <h2>Επικοινωνία</h2>
+        <p>Swing by for a cup of coffee, or leave us a message:</p>
+      </div>
+      <div class="row">
+        <div class="column">
+          <img src="/w3images/map.jpg" style="width:100%">
+        </div>
+        <div class="column">
+          <form action="/action_page.php">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            <label for="country">Country</label>
+            <select id="country" name="country">
+              <option value="australia">Australia</option>
+              <option value="canada">Canada</option>
+              <option value="usa">USA</option>
+            </select>
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+        <div id="map" class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-1"></div>
+      </div>
+    </div> <!-- Contact ends here -->
 
     <!-- Footer starts here -->
     <footer>
@@ -237,7 +245,7 @@ Nullam condimentum et libero sit amet vestibulum. Etiam vestibulum turpis sit am
     <script src="js/scripts.js"></script>
     <!-- Google Maps API key -->
     <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRE7BaZiOFWO13RZIn-FnTMCFf23YevQQ&callback=initMap">
+      src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
     </script>
 
   </body>
