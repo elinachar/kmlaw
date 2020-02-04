@@ -1,31 +1,22 @@
 $(document).ready(function(){
-
   // Smooth scrolling on single-page
-
-  // On hash change scroll to proper offset top
-  // This is for "window.location.hash = href;"
-  // If you do not use it then it scrolls in the first click w/o offset and
-  // only on second click on the same anchor to the proper top offset.
-  // But it shows a shake event so I comment it and the window.location.hash = href
-  $(window).on('hashchange', function() {
-    window.scrollTo(window.scrollX, window.scrollY - 70);
-  });
-
-  // Code for smooth scrolling
   var $root = $('html, body');
   $('.navbar-nav li a, .nav-item .dropdown-menu a, .logo a').click(function() {
     var href = $.attr(this, 'href');
-    // var offset = topOffset(href);
-    var topOffset = 70;
-    if (href == "#index" && $(window).width() > 767) {
-      topOffset = 135;
-    }
+    // var offset = 80
+    // offset = 0;
+    // if (href == "#index") {
+    //   offset = 135;
+    // }
     if (href != undefined && href != '#') {
+      var offset = 0;
+      console.log("href", href, "window location hash", window.location.hash);
       $root.animate({
 
-        scrollTop: $(href).offset().top - topOffset
+        scrollTop: $(href).offset().top - 60
       }, 500, function () {
-        // window.location.hash = href;
+        window.location.hash = href;
+        console.log("href", href, "window location hash", window.location.hash);
       });
     };
   });
@@ -51,7 +42,7 @@ $(document).ready(function(){
   });
 
   // Function for resizing the logo in SM and XS screens
-  logoSmallNavbarSize();
+  logo_small_navbar_size();
 
   // Clicking submit button of contact form
   // Check required fields: name, e-mail and text message and turn to red border if not filled wrt error msg
@@ -96,7 +87,7 @@ $(document).ready(function(){
 
 // On Resize of document
 $(window).on('resize', function(){
-  logoSmallNavbarSize();
+  logo_small_navbar_size();
 });
 
 // After document is loaded
@@ -121,8 +112,9 @@ $(window).load(function(){
 
 
 // Functions
+
 // Function for resizing the logo in SM and XS screens
-function logoSmallNavbarSize() {
+function logo_small_navbar_size() {
     var logoWidth;
     if ($(window).width() < 767) {
       logoWidth = $(window).width()- $(".navbar-toggler").outerWidth() - parseInt($(".navbar-brand").css("margin-left")) - parseInt($("nav").css("padding-left")) - 50;

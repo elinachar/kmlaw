@@ -142,10 +142,10 @@
             <a class="nav-link" href="#about-us" data-toggle="collapse" data-target=".navbar-collapse.show">Η ομάδα μας</a>
           </li>
           <li class="nav-item dropdown">
-             <a class="nav-link dropdown-toggle d-sm-none d-md-block" href="#practice-areas" id="navbardrop" data-toggle="dropdown">
-               Τομείς Δραστηριότητας</a>
-             <a class="nav-link dropdown-toggle d-block d-md-none" id="navbardrop" data-toggle="dropdown">
-               Τομείς Δραστηριότητας<img src="img/arrow_3lines.png" alt="arrow"></a>
+             <a class="nav-link dropdown-toggle" href="#practice-areas" id="navbardrop" data-toggle="dropdown">
+               Τομείς Δραστηριότητας<img src="img/arrow_3lines.png" alt="arrow">
+               <!-- <i class='fas fa-angle-down fa-lg'></i> -->
+             </a>
              <div class="dropdown-menu">
                <a class="dropdown-item d-block d-md-none" href="#practice-areas" data-toggle="collapse" data-target=".navbar-collapse.show">Όλοι οι Τομείς Δραστηριότητας</a>
                <a class="dropdown-item" href="#" data-toggle="collapse" data-target=".navbar-collapse.show">Εργατικό Δίκαιο</a>

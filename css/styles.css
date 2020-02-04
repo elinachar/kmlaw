@@ -3,13 +3,13 @@
 
  :root {
   --blue: #162641;
+  --blue-trans: rgba(22, 38, 65, .95);
   --blue-gray: #737c8d;
   --blue-gray-trans: rgba(115, 124, 141, .5);
   --blue-gray-bg: #e7e9ec;
   --red: #751618;
   --off-white: rgba(255,255,255,.8);
 }
-
 
  body {
   font-family: "Alegreya Sans", Georgia, serif;
@@ -27,6 +27,10 @@
   border: none!important;
 }
 
+.section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 
 /* LOGO */
 .logo {
@@ -177,9 +181,14 @@
   border-radius: 0;
 }
 
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: var(--blue-gray-bg);
+}
+
 button.navbar-toggler {
   height: 48px; /* For tap targets min size 48px */
-  background-color: var(--blue-gray-bkg);
+  background-color: var(--blue-gray-bg);
   /* border-color: var(--blue)!important; */
 }
 
@@ -200,13 +209,50 @@ button.navbar-toggler {
 }
 
 .navbar-shrink .nav-item a {
-  height: 40px;
+  height: 48px;
+  margin-top: -5px;
 }
 
 .navbar-shrink .nav-item {
   padding-top: 15px;
 }
 
+/* INDEX */
+.index {
+  margin-top: 135px;
+  height: 500px;
+  background-color: var(--blue-trans);
+}
+
+.index img {
+  background-color: rgba(255, 255, 255, .5);
+  margin-top: 100px;
+}
+
+/* PRACTICE AREAS */
+.practice-areas {
+  background-color: var(--blue-trans);
+  color: var(--off-white);
+  /* height: 500px; */
+}
+
+.practice-areas .row {
+  width: 90%;
+  margin: auto;
+}
+
+.practice-areas .card {
+  background-color: var(--blue-gray-bg);
+  color: var(--blue);
+  height: 230px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+/* ABOUT US*/
+#about-us img {
+  cursor: pointer;
+}
 
 /* CONTACT */
 address span,
@@ -362,10 +408,6 @@ footer p {
 
   .navbar-nav .dropdown-menu a:hover {
     background-color: var(--blue-gray-bkg);
-  }
-
-  #contact {
-    margin-top: 150px;
   }
 
   .contact-form {
